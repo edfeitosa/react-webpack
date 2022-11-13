@@ -3,10 +3,18 @@ import { createRoot } from 'react-dom/client';
 import App from './app';
 
 const rootElement = document.getElementById('root');
-const root = createRoot(rootElement);
+/* const root = createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
-);
+); */
+
+if (rootElement) {
+  createRoot(rootElement).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
