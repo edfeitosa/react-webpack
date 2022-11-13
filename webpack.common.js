@@ -3,18 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
-const environment = process.env.NODE_ENV === 'prod' ? 'production' : 'development';
-
 module.exports = {
-  mode: environment,
-  devServer: {
-    historyApiFallback: true,
-    static: path.resolve(__dirname, './'),
-    open: true,
-    compress: true,
-    hot: true,
-    port: 3000
-  },
   resolve:  {
     extensions: ['*', '.js', '.jsx']
   },
