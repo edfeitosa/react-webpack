@@ -16,9 +16,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Meu template com Webpack',
       template: path.resolve(__dirname, './src/html/template.html'),
-      filename: 'index.html'
+      filename: 'index.html',
+      title: 'Webpack Tutorial',
+      lang: 'pt-BR',
+      charset: 'utf-8',
+      author: 'Eduardo Feitosa',
+      description: 'Estudos de configuração do Webpack',
+      keywords: 'web, react, webpack',
     }),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin()
